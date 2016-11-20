@@ -1,0 +1,10 @@
+python-base:
+  build: .
+  ports:
+    - "2222:2222"
+  volumes:
+    - .:/apps/python-app
+  links:
+    - python
+python:
+  image: python:3-alpine
