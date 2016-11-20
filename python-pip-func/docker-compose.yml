@@ -1,5 +1,5 @@
-python-base:
-  build: .
+basepython:
+  image: alpine:3.3
   ports:
     - "2222:2222"
   volumes:

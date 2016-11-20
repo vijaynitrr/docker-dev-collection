@@ -1,0 +1,9 @@
+python3dev:
+  image: python:3-alpine
+  command: /bin/sh -c "mkdir /home/docker-py"
+  working_dir: /home/docker-py
+  volumes:
+    - .:/home/docker-py
+  command: /bin/sh -c "pip install -r requirements.txt"
+  command: /bin/sh -c "pip install -r test-requirements.txt"
+

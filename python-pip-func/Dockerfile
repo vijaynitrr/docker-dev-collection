@@ -11,5 +11,7 @@ RUN mkdir -p /apps/python-app && chown vijay:vijay /apps/python-app
 ADD . /apps/python-app
 WORKDIR /apps/python-app
 
-COPY docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT ["docker-entrypoint.sh"]
+#COPY ./docker-entrypoint.sh /usr/local/bin/
+#ENTRYPOINT ["docker-entrypoint.sh"]
+
+ENTRYPOINT ["/apps/python-app"]
